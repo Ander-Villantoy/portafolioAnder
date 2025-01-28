@@ -1,132 +1,140 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
-}
-
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1;
+    background-color: #f4f4f9;
+    color: #333;
 }
-ol, ul,li {
-    list-style: none;
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
 }
-a{
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.project img {
+    width: 100%;
+    height: auto;
+}
+.project-content {
+    padding: 1rem;
+}
+.project-content h2 {
+    margin-top: 0;
+}
+.project-content p {
+    margin-bottom: 1rem;
+}
+.project-content a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007bff;
     text-decoration: none;
-    color: var(--cor-de-link);
+    border-radius: 4px;
+}
+.project-content a:hover {
+    background-color: #0056b3;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-section.menu{
-
+/* Estilo general para pantallas grandes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+.project {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.project img {
+    width: 100%;
+    height: auto;
+}
+.project-content {
+    padding: 1rem;
+}
+.project-content h2 {
+    margin-top: 0;
+}
+.project-content p {
+    margin-bottom: 1rem;
+}
+.project-content a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.project-content a:hover {
+    background-color: #0056b3;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    margin-top: 2rem;
 }
 
-/*Sección Title*/
-
-section.title{
-
-}
-
-/*Sección About*/
-
-section.about{
-
-}
-
-/*Sección Hobbies*/
-
-section.hobbies{
-    
-}
-
-/* Experiencia Académica*/
-
-section.academic{
-
-}
-
-/* experiencia*/
-
-section.experience{
-
-}
-
-/*Contacto*/
-
-section.formcontato{
-
-}
-
-/*footeer*/
-
-section.footer{
-   
-}
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-/* Menú */
-
-/*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-/*Menu*/
-
-/*Titulo*/
-
-/*Sección sobre mi*/
-
-/*Skills*/
-
-/*Hobbies*/
- 
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
- /*Contacto*/
-
-/*Footer*/
-
+/* Estilo para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 0 1rem;
+    }
+    .project {
+        margin-bottom: 1.5rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .project-content h2 {
+        font-size: 1.2rem;
+    }
+    .project-content p {
+        font-size: 0.9rem;
+    }
+    .project-content a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
 }
