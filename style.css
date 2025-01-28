@@ -11,42 +11,6 @@ header {
     padding: 1rem 2rem;
     text-align: center;
 }
-.container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-}
-.project {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    overflow: hidden;
-}
-.project img {
-    width: 100%;
-    height: auto;
-}
-.project-content {
-    padding: 1rem;
-}
-.project-content h2 {
-    margin-top: 0;
-}
-.project-content p {
-    margin-bottom: 1rem;
-}
-.project-content a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-.project-content a:hover {
-    background-color: #0056b3;
-}
 footer {
     text-align: center;
     padding: 1rem;
@@ -56,19 +20,6 @@ footer {
 }
 
 /* Estilo general para pantallas grandes */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 2rem;
-    text-align: center;
-}
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -81,12 +32,19 @@ header {
     margin-bottom: 2rem;
     overflow: hidden;
 }
-.project img {
-    width: 100%;
-    height: auto;
+.project-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espaciado entre la imagen y el contenido */
+}
+.project-row img {
+    width: 150px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    border-radius: 8px;
 }
 .project-content {
     padding: 1rem;
+    flex: 1; /* Ocupa el espacio restante */
 }
 .project-content h2 {
     margin-top: 0;
@@ -105,18 +63,14 @@ header {
 .project-content a:hover {
     background-color: #0056b3;
 }
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: #fff;
-    margin-top: 2rem;
-}
 
 /* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
+    }
+    header h1 {
+        font-size: 1.5rem;
     }
     .container {
         padding: 0 1rem;
@@ -124,8 +78,12 @@ footer {
     .project {
         margin-bottom: 1.5rem;
     }
-    header h1 {
-        font-size: 1.5rem;
+    .project-row {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+        text-align: center;
+    }
+    .project-row img {
+        width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
     }
     .project-content h2 {
         font-size: 1.2rem;
