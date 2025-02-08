@@ -15,13 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const projectElement = document.createElement("div");
         projectElement.classList.add("project");
 
+        // Número de WhatsApp (cámbialo por el tuyo)
+        const numeroWhatsApp = "922036856"; 
+        const mensaje = encodeURIComponent(`¡Hola! Estoy interesado en más información sobre: ${proyecto.titulo}`);
+
         projectElement.innerHTML = `
             <div class="project-row">
                 <img src="${proyecto.imagen}" alt="Imagen de ${proyecto.titulo}">
                 <div class="project-content">
                     <h2>${proyecto.titulo}</h2>
                     <p>${proyecto.descripcion}</p>
-                    <a href="${proyecto.enlace}" target="_blank">Ver Proyecto</a>
+                    <a href="${proyecto.enlace}" class="proyecto-button" target="_blank">Ver Proyecto</a>
+                    <a href="https://wa.me/${numeroWhatsApp}?text=${mensaje}" class="whatsapp-button" target="_blank">Contactar por WhatsApp</a>
                 </div>
             </div>
         `;
