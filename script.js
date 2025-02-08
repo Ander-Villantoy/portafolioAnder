@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projectElement.classList.add("project");
 
         // Número de WhatsApp (cámbialo por el tuyo)
-        const numeroWhatsApp = "922036856"; 
+        const numeroWhatsApp = "+51922036856"; 
         const mensaje = encodeURIComponent(`¡Hola! Estoy interesado en más información sobre: ${proyecto.titulo}`);
 
         projectElement.innerHTML = `
