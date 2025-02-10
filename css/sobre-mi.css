@@ -1,0 +1,76 @@
+/* Estilos específicos para la página Sobre Mí */
+
+/* Contenedor principal */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+/* Sección Sobre Mí */
+#sobre-mi {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#sobre-mi h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#sobre-mi p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Lista de especialidades */
+#sobre-mi ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#sobre-mi li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+}
+
+/* Sección Experiencia */
+#experiencia {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#experiencia h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#experiencia p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    #sobre-mi, #experiencia {
+        padding: 15px;
+    }
+    
+    #sobre-mi h1, #experiencia h2 {
+        font-size: 1.6rem;
+    }
+    
+    #sobre-mi p, #experiencia p {
+        font-size: 1rem;
+    }
+}

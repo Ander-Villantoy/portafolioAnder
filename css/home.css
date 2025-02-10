@@ -1,0 +1,70 @@
+/* Animaciones para la página de inicio */
+
+/* Contenedor principal */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    width: 100%;
+    max-width: 900px; /* Limita el ancho en pantallas grandes */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Sección Hero */
+.hero {
+    padding-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #A68A50;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 1s;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,94 @@
+/* Estilos específicos para la página de Contacto */
+
+.contacto {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contacto h1 {
+    font-size: 2rem;
+    color: #A68A50;
+    margin-bottom: 15px;
+}
+
+.contacto p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* Botón de envío */
+button {
+    background-color: #A68A50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background-color: #8C6E3F;
+    transform: scale(1.05);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .contacto {
+        max-width: 90%;
+        padding: 15px;
+    }
+    
+    .contacto h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contacto p {
+        font-size: 0.9rem;
+    }
+    
+    input, textarea {
+        font-size: 0.9rem;
+    }
+}

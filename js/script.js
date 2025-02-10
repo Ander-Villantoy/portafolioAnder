@@ -1,13 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("projects-container");
-
-    if (!container) {
-        console.error("No se encontró el contenedor de proyectos.");
-        return;
-    }
-
-    if (typeof proyectos === "undefined") {
-        console.error("No se pudieron cargar los proyectos.");
+    if (!container || typeof proyectos === "undefined") {
+        console.error("No se encontró el contenedor de proyectos o los datos no se cargaron.");
         return;
     }
 
@@ -15,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const projectElement = document.createElement("div");
         projectElement.classList.add("project");
 
-        // Número de WhatsApp (cámbialo por el tuyo)
+        // Configuración de WhatsApp
         const numeroWhatsApp = "+51922036856"; 
-        const mensaje = encodeURIComponent(`¡Hola! Estoy interesado en más información sobre: ${proyecto.titulo}`);
+        const mensaje = encodeURIComponent(`¡Hola! Me llamó la atención el "${proyecto.titulo}" y me gustaría saber más. ¿Me podrías dar más detalles? ¡Gracias de antemano!`);
 
         projectElement.innerHTML = `
             <div class="project-row">
-                <img src="${proyecto.imagen}" alt="Imagen de ${proyecto.titulo}">
+                <img src="${proyecto.imagen}" alt="${proyecto.titulo} - Proyecto de Ebanistería">
                 <div class="project-content">
                     <h2>${proyecto.titulo}</h2>
                     <p>${proyecto.descripcion}</p>
