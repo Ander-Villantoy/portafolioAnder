@@ -116,9 +116,12 @@ nav ul li a:hover {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Asegura que los elementos estén en una sola fila */
+        flex-wrap: wrap; /* Permite que los elementos se ajusten si no caben */
+        justify-content: center; /* Centra los elementos */
+        gap: 10px; /* Espaciado entre elementos */
         padding: 10px;
-    }
+    }    
 
     nav ul li {
         display: block;
